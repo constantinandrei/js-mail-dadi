@@ -16,6 +16,7 @@ const lunghezzaArray = document.getElementById('array-length');
 const spliceLength = document.getElementById('splice-length');
 const spliceSelect = document.getElementById('splice-select');
 const submitButton = document.getElementById('submit');
+const cutButton = document.getElementById('cut');
 
 submitButton.addEventListener('click', function () {
 
@@ -32,7 +33,31 @@ submitButton.addEventListener('click', function () {
         myUl.innerHTML += `<li>${myArray[i]}</li>`
     }
 
+    if (myArray.length > spliceLength.value) {
+        for (let i = myArray.length - spliceLength.value; i < myArray.length; i++){
+            lastElements.innerHTML += `<li>${myArray[i]}</li>`;
+            
+        }
 
+        spliceSelect.innerHTML = `Gli ultimi ${spliceLength.value}`;
+
+
+
+    } else if (myArray.length < spliceLength.value) {
+        for (let i = 0; i < myArray.length; i++){
+            lastElements.innerHTML += `<li>${myArray[i]}</li>` 
+        }
+        spliceSelect.innerHTML = `La lista è troppo corta per selezionare ${spliceLength.value} elementi`
+    } else {
+        spliceSelect.innerHTML = `Il taglio ha la stessa lunghezza della lista`
+    }
+    
+
+})
+
+cutButton.addEventListener('click', function () {
+    // reset HTML
+    lastElements.innerHTML = '';
     // seleziono gli ulti n elementi
     if (myArray.length > spliceLength.value) {
         for (let i = myArray.length - spliceLength.value; i < myArray.length; i++){
@@ -44,17 +69,15 @@ submitButton.addEventListener('click', function () {
 
 
 
-    } else {
+    } else if (myArray.length < spliceLength.value) {
         for (let i = 0; i < myArray.length; i++){
             lastElements.innerHTML += `<li>${myArray[i]}</li>` 
         }
         spliceSelect.innerHTML = `La lista è troppo corta per selezionare ${spliceLength.value} elementi`
+    } else {
+        spliceSelect.innerHTML = `Il taglio ha la stessa lunghezza della lista`
     }
-
-    
-    
 })
-
 
 
 
