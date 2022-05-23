@@ -17,10 +17,11 @@ const lastFive = document.getElementById('last-five');
 
 for (let i = 0; i < myArray.length; i++) {
     myUl.innerHTML += `<li>${myArray[i]}</li>`
+
 }
 
 
-if (myArray.length >= 5) {
+if (myArray.length > 5) {
     for (let i = myArray.length - 5; i < myArray.length; i++){
         lastFive.innerHTML += `<li>${myArray[i]}</li>` 
     }
