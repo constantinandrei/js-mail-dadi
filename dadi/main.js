@@ -51,15 +51,15 @@ submitButton.addEventListener('click', function () {
     }
 
     if (userScore === computerScore) {
-        results.innerHTML = `<h1>Il risultato è pari</h1><p>Punteggio coumputer: ${computerScore}</p><p>Punteggio Utente: ${userScore}</p>`
+        results.innerHTML = `<h1>Il risultato è pari</h1><p>Punteggio computer: ${computerScore}</p><p>Punteggio Utente: ${userScore}</p>`
     }
 
     if (userScore > computerScore) {
-        results.innerHTML = results.innerHTML = `<h1>Hai vinto!!!</h1><p>Punteggio coumputer: ${computerScore}</p><p>Punteggio Utente: ${userScore}</p>`
+        results.innerHTML = results.innerHTML = `<h1>Hai vinto!!!</h1><p>Punteggio computer: ${computerScore}</p><p>Punteggio Utente: ${userScore}</p>`
     }
 
     if (computerScore > userScore) {
-        results.innerHTML = results.innerHTML = `<h1>Peccato, hai perso</h1><p>Punteggio coumputer: ${computerScore}</p><p>Punteggio Utente: ${userScore}</p>`
+        results.innerHTML = results.innerHTML = `<h1>Peccato, hai perso</h1><p>Punteggio computer: ${computerScore}</p><p>Punteggio Utente: ${userScore}</p>`
     }
     
 
