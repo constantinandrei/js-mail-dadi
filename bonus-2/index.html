@@ -11,10 +11,14 @@
     <div class="container">
         <div class="p-5" id="app">
             <p>Quanti elementi vuoi generare?</p>
-            <input type="number" id="array-length">
+            <input type="number" id="array-length" class="mb-3">
+            <div></div>
+            <div id="error-1" class="d-none text-danger">Inserisci un numero più grande di 0</div>
             <div id="submit" class="btn btn-primary">Genera</div>
             <p>Quanti elementi vuoi selezionare ala fine della lista?</p>
-            <input type="number" id="splice-length">
+            <input type="number" id="splice-length" class="mb-3">
+            <div></div>
+            <div id="error-2" class="d-none text-danger">Inserisci un numero più grande di 0</div>
             <div id="cut" class="btn btn-primary">Taglia</div>
             <p>La Lista generata</p>
             <ul id="my-ul"></ul>
